@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SOUNDWAVE FEST 2025 - UTS Web Desain 2 | Paket A</title>
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+<style>
+/* =============================================
+STYLE DASAR SUDAH DISIAPKAN - JANGAN DIUBAH
+============================================= */
+body {
+font-family: 'Segoe UI', sans-serif;
+background-color: #0d0d0d;
+color: #f0f0f0;
+}
+.hero {
+background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+padding: 100px 0 60px;
+text-align: center;
+}
+.hero h1 {
+font-size: 3.5rem;
+font-weight: 900;
+color: #e94560;
+letter-spacing: 4px;
+text-transform: uppercase;
+}
+.hero p {
+font-size: 1.2rem;
+color: #a0a0b0;
+}
+.section-title {
+font-size: 1.8rem;
+font-weight: 700;
+color: #e94560;
+border-left: 5px solid #e94560;
+padding-left: 15px;
+margin-bottom: 30px;
+}
+section {
+padding: 60px 0;
+border-bottom: 1px solid #222;
+}
+.soal-label {
+display: inline-block;
+background: #e94560;
+color: white;
+font-size: 0.75rem;
+font-weight: 700;
+padding: 3px 10px;
+border-radius: 3px;
+margin-bottom: 10px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+/* Kartu lineup artis */
+.artist-card {
+background: #1a1a2e;
+border: 1px solid #333;
+border-radius: 10px;
+padding: 20px;
+text-align: center;
+height: 100%;
+}
+.artist-card img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 15px;
+border: 3px solid #e94560;
+}
+.artist-card h5 {
+color: #ffffff;
+font-weight: 700;
+}
+.artist-card p {
+color: #888;
+font-size: 0.85rem;
+}
+/* Tiket */
+.ticket-card {
+background: #1a1a2e;
+border: 2px solid #e94560;
+border-radius: 12px;
+padding: 25px;
+text-align: center;
+}
+.ticket-card .price {
+font-size: 2.2rem;
+font-weight: 900;
+color: #e94560;
+}
+.ticket-card .type {
+font-size: 1.1rem;
+font-weight: 700;
+color: #fff;
+text-transform: uppercase;
+}
+/* Footer */
+footer {
+background: #0a0a0a;
+text-align: center;
+padding: 30px;
+color: #555;
+font-size: 0.85rem;
+}
+* ====== SOAL 3 - FORM PEMBELIAN TIKET ====== *
+
+.card{
+background: #1a1a2e;
+border: 2px solid #e94560 !important;
+border-radius: 15px;
+box-shadow: 0 0 20px rgba(233,69,96,0.2);
+}
+
+.card:hover{
+box-shadow: 0 0 30px rgba(233,69,96,0.5);
+transition: 0.4s;
+}
+
+.form-group label{
+color: #ffffff;
+font-weight: 600;
+margin-bottom: 8px;
+}
+
+.form-control{
+background-color: #0f172a;
+color: #ffffff;
+border: 1px solid #444;
+border-radius: 8px;
+}
+
+.form-control:focus{
+background-color: #0f172a;
+color: #ffffff;
+border-color: #e94560;
+box-shadow: 0 0 10px rgba(233,69,96,0.5);
+}
+
+.form-control::placeholder{
+color: #999;
+}
+
+.form-text{
+color: #b0b0b0 !important;
+}
+
+.form-check-label{
+color: #f0f0f0;
+}
+
+.form-check-input:checked{
+background-color: #e94560;
+border-color: #e94560;
+}
+
+.btn-danger{
+background-color: #e94560;
+border: none;
+font-weight: bold;
+letter-spacing: 1px;
+padding: 12px;
+border-radius: 10px;
+}
+
+.btn-danger:hover{
+background-color: #ff4d6d;
+transform: translateY(-3px);
+transition: 0.3s;
+box-shadow: 0 5px 15px rgba(233,69,96,0.5);
+}
+
+.btn-danger:active{
+transform: scale(0.98);
+}
+
+#daftar{
+background: linear-gradient(
+        135deg,
+        #0d0d0d,
+        #131326,
+        #1a1a2e
+    );
+}
+* ====== SOAL 4 — HARGA TIKET ====== *
+
+.ticket-card-custom {
+  border-radius: 18px;
+  padding: 30px 25px;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ticket-card-custom:hover {
+  transform: translateY(-8px);
+}
+
+/* Regular — Blue theme */
+.regular-card {
+  background: linear-gradient(160deg, #0f172a, #1e3a5f);
+  border: 2px solid #3b82f6;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+}
+.regular-card:hover {
+  box-shadow: 0 10px 35px rgba(59, 130, 246, 0.5);
+}
+
+/* VIP — Pink theme */
+.vip-card {
+  background: linear-gradient(160deg, #1a0a1e, #3d0f3f);
+  border: 2px solid #e94560;
+  box-shadow: 0 0 25px rgba(233, 69, 96, 0.4);
+}
+.vip-card:hover {
+  box-shadow: 0 10px 40px rgba(233, 69, 96, 0.6);
+}
+
+/* VVIP — Blue-pink gradient theme */
+.vvip-card {
+  background: linear-gradient(160deg, #0d1b3e, #2a1040);
+  border: 2px solid #818cf8;
+  box-shadow: 0 0 20px rgba(129, 140, 248, 0.3);
+}
+.vvip-card:hover {
+  box-shadow: 0 10px 35px rgba(129, 140, 248, 0.55);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #e94560, #ff6b9d);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 4px 16px;
+  border-radius: 20px;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.ticket-header {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.ticket-badge {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.ticket-price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+.vip-price  { color: #ff6b9d; }
+.vvip-price { color: #a5b4fc; }
+
+.ticket-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  margin: 0 auto 20px;
+  width: 80%;
+  border-radius: 2px;
+}
+.vip-divider  { background: linear-gradient(90deg, transparent, #e94560, transparent); }
+.vvip-divider { background: linear-gradient(90deg, transparent, #818cf8, transparent); }
+
+.ticket-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+  text-align: left;
+}
+.ticket-benefits li {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.btn-ticket {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-regular {
+  background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(59,130,246,0.4);
+}
+.btn-regular:hover {
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(59,130,246,0.6);
+}
+
+.btn-vip {
+  background: linear-gradient(90deg, #e94560, #ff6b9d);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(233,69,96,0.4);
+}
+.btn-vip:hover {
+  background: linear-gradient(90deg, #ff4d6d, #ff8fb1);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(233,69,96,0.6);
+}
+
+.btn-vvip {
+  background: linear-gradient(90deg, #4f46e5, #818cf8);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(129,140,248,0.4);
+}
+.btn-vvip:hover {
+  background: linear-gradient(90deg, #6366f1, #a5b4fc);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(129,140,248,0.6);
+}
+/* ====== SOAL 5 — KONTAK ====== */
+
+#kontak {
+  background: linear-gradient(180deg, #0d0d0d, #0f0f1e);
+}
+
+/* Info Cards */
+.contact-info-card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a45;
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.contact-info-card:hover {
+  border-color: #e94560;
+  box-shadow: 0 0 25px rgba(233,69,96,0.25);
+  transform: translateY(-5px);
+
+
+.contact-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.contact-info-card h6 {
+  color: #e94560;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-info-card p {
+  color: #9090aa;
+  font-size: 0.83rem;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Sosmed Box */
+.sosmed-box {
+  background: #1a1a2e;
+  border: 1px solid #2a2a45;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.sosmed-title {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.sosmed-sub {
+  color: #7070aa;
+  font-size: 0.82rem;
+  margin-bottom: 22px;
+}
+
+.sosmed-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.sosmed-item:hover {
+  text-decoration: none;
+  transform: translateX(6px);
+}
+
+.instagram       { background: rgba(225,48,108,0.08); border-color: rgba(225,48,108,0.2); }
+.instagram:hover { background: rgba(225,48,108,0.18); border-color: #e1306c; }
+
+.twitter         { background: rgba(29,161,242,0.08); border-color: rgba(29,161,242,0.2); }
+.twitter:hover   { background: rgba(29,161,242,0.18); border-color: #1da1f2; }
+
+.tiktok          { background: rgba(233,69,96,0.08);  border-color: rgba(233,69,96,0.2); }
+.tiktok:hover    { background: rgba(233,69,96,0.18);  border-color: #e94560; }
+
+.youtube         { background: rgba(255,0,0,0.08);    border-color: rgba(255,0,0,0.15); }
+.youtube:hover   { background: rgba(255,0,0,0.18);    border-color: #ff0000; }
+
+.sosmed-logo { font-size: 1.4rem; }
+
+.sosmed-name {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.sosmed-handle {
+  color: #7070aa;
+  font-size: 0.75rem;
+}
+
+.sosmed-arrow {
+  margin-left: auto;
+  color: #555;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.sosmed-item:hover .sosmed-arrow { color: #e94560; }
+</style>
+</head>
+<body>
+<!-- ==============================
+HERO SECTION (Sudah Lengkap)
+============================== -->
+<div class="hero">
+<div class="container">
+<h1>SOUNDWAVE FEST 2025</h1>
+<p>Festival Musik Terbesar Tahun Ini &mdash; 3 Hari, 20 Band, 1 Panggung Epik</p>
+<p><strong style="color:#e94560;">15–17 Agustus 2025</strong> &nbsp;|&nbsp; <strong
+style="color:#e94560;">Gelora Bung Karno, Jakarta</strong></p>
+</div>
+</div>
+<!-- ============================================================
+SOAL 1 — SISTEM GRID BOOTSTRAP
+Lengkapi bagian [...] dengan class Bootstrap yang tepat
+============================================================ -->
+<section id="lineup">
+<div class="container">
+<span class="soal-label">Soal 1 — Grid Bootstrap</span>
+<h2 class="section-title">Lineup Artis</h2>
+
+<div class="row">
+<div class="col-md-4">
+<div class="artist-card">
+<img src="https://shopee.co.id/inspirasi-shopee/wp-content/uploads/2019/02/kaka-slank.webp" alt="Artis 1"/>
+<h5>Rocket Ignition</h5>
+<p>Hard Rock | Jakarta</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="artist-card">
+<img src="https://media.soundoflife.com/34/resources/fGJEbrsYIk5M8tG6ojHmaQp7ee5KfSs9mhZYIt8X.jpg" alt="Artis 2"/>
+<h5>Midnight Echo</h5>
+<p>Indie Pop | Bandung</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="artist-card">
+<img src="https://dewatiket.id/blog/wp-content/uploads/2023/10/Budi-Doremi.jpg" alt="Artis 3"/>
+<h5>Thunder Hollow</h5>
+<p>Metal | Surabaya</p>
+</div>
+</div>
+<div class="col-md-4 mt-4">
+<div class="artist-card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_bsSPlzx6YD8NItTchlQOTS9afF-DeHTaMs75-FbmjQ&s=10" alt="Artis 4"/>
+<h5>The Wanderers</h5>
+<p>Acoustic | Yogyakarta</p>
+</div>
+</div>
+<div class="col-md-4 mt-4">
+<div class="artist-card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQukaSjtu8sr4LRZGYeyJOXzLEdfT1pqSyko07MHcf2Gg&s=10" alt="Artis 5"/>
+<h5>Solar Drift</h5>
+<p>Psychedelic | Bali</p>
+</div>
+</div>
+<div class="col-md-4 mt-4">
+<div class="artist-card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_pWIrBAJVHiG5JHtzdJq9I4t7ZCfAs1jxsGxttLXtwA&s=10" alt="Artis 6"/>
+<h5>Iron Canvas</h5>
+<p>Progressive | Medan</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================
+SOAL 2A — TABEL BOOTSTRAP
+Lengkapi [...] dengan class Bootstrap yang tepat
+============================================================ -->
+<section id="jadwal">
+<div class="container">
+<span class="soal-label">Soal 2 — Tabel Bootstrap</span>
+<h2 class="section-title">Jadwal Penampilan</h2>
+<p class="text-muted mb-4">
+</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped table-hover table class=" style="background:#ffe4ec;border-radius:20px; overflow:hidden;box-shadow:0 8px 20px rgba(255,79,129,0.2>:">
+<thead class="thead-dark">
+<tr>
+<th>Hari</th>
+<th>Waktu</th>
+<th>Artis</th>
+<th>Genre</th>
+<th>Panggung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hari 1 (15 Agt)</td>
+<td>18.00 – 19.30</td>
+<td>The Wanderers</td>
+<td>Acoustic</td>
+<td>Stage B</td>
+</tr>
+<tr>
+<td>Hari 1 (15 Agt)</td>
+<td>20.00 – 22.00</td>
+<td>Midnight Echo</td>
+<td>Indie Pop</td>
+<td>Main Stage</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- ============================================================
+SOAL 3 — FORM BOOTSTRAP
+Lengkapi [...] dengan class Bootstrap yang tepat
+============================================================ -->
+<section id="daftar">
+<div class="container">
+<span class="soal-label">Soal 3 — Form Bootstrap</span>
+<h2 class="section-title">Beli Tiket</h2>
+<p class="text-muted mb-4">
+</p>
+<div class="row justify-content-center">
+<div class="col-md-7">
+<div class="card p-4 bg-dark border border border-danger">
+<div class="form-group">
+<label for="nama">Nama Lengkap</label>
+<input type="text" class="form-control" id="nama" placeholder="Masukkan nama
+lengkap Anda"/>
+</div>
+<div class="form-group">
+<label for="email">Alamat Email</label>
+<input type="email" class="form-control" id="email"
+placeholder="contoh@email.com"/>
+</div>
+<div class="form-group">
+<label for="telp">Nomor Telepon</label>
+<input type="tel" class="form-control" id="telp" placeholder="08xxxxxxxxxx"/>
+</div>
+<div class="form-group">
+<label for="tiket">Jenis Tiket</label>
+<select class="form-control" id="tiket">
+<option value="">-- Pilih Jenis Tiket --</option>
+<option>Regular (Rp 150.000)</option>
+<option>VIP (Rp 350.000)</option>
+<option>VVIP (Rp 750.000)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="jumlah">Jumlah Tiket</label>
+<input type="number" class="form-control" id="jumlah" min="1" max="10" value="1"/>
+<small class="form-text text-muted">Maksimal pembelian 10 tiket per transaksi.</small>
+</div>
+<div class="form-group">
+<div class="form-check">
+<input type="checkbox" class="form-check-input" id="syarat"/>
+<label class="form-check-label" for="syarat">
+Saya menyetujui syarat dan ketentuan yang berlaku.
+</label>
+</div>
+</div>
+<button type="submit" class="btn btn-danger btn-lg btn-block">
+■■ Beli Tiket Sekarang
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SOAL 4 — HARGA TIKET -->
+<section id="harga">
+<div class="container">
+<span class="soal-label">Soal 4 — Implementasi Wireframe</span>
+<h2 class="section-title">Harga Tiket</h2>
+
+<div class="row mt-4">
+
+<!-- REGULAR -->
+<div class="col-md-4 col-12 mb-4">
+<div class="ticket-card-custom regular-card h-100 d-flex flex-column">
+<div class="ticket-header">
+<span class="ticket-badge">🎵 REGULAR</span>
+</div>
+<div class="ticket-price">Rp 150.000</div>
+<div class="ticket-divider"></div>
+<ul class="ticket-benefits">
+<li>✔ Akses Area Umum</li>
+<li>✔ 1 Minuman Gratis</li>
+<li>✔ E-Ticket Digital</li>
+</ul>
+<div class="mt-auto pt-3">
+<a href="#daftar" class="btn-ticket btn-regular">🛒 Beli Sekarang</a>
+</div>
+</div>
+</div>
+
+<!-- VIP -->
+<div class="col-md-4 col-12 mb-4">
+<div class="ticket-card-custom vip-card h-100 d-flex flex-column">
+<div class="popular-badge">⭐ TERPOPULER</div>
+<div class="ticket-header">
+<span class="ticket-badge">🎸 VIP</span>
+</div>
+<div class="ticket-price vip-price">Rp 350.000</div>
+<div class="ticket-divider vip-divider"></div>
+<ul class="ticket-benefits">
+<li>✔ Akses Area VIP</li>
+<li>✔ Paket Snack & Minuman</li>
+<li>✔ Merchandise Eksklusif</li>
+</ul>
+<div class="mt-auto pt-3">
+<a href="#daftar" class="btn-ticket btn-vip">🛒 Beli Sekarang</a>
+</div>
+</div>
+</div>
+
+<!-- VVIP -->
+<div class="col-md-4 col-12 mb-4">
+<div class="ticket-card-custom vvip-card h-100 d-flex flex-column">
+<div class="ticket-header">
+<span class="ticket-badge">👑 VVIP</span>
+</div>
+<div class="ticket-price vvip-price">Rp 750.000</div>
+<div class="ticket-divider vvip-divider"></div>
+<ul class="ticket-benefits">
+<li>✔ Akses Backstage Pass</li>
+<li>✔ Meet & Greet Artis</li>
+<li>✔ Paket Premium Lengkap</li>
+</ul>
+<div class="mt-auto pt-3">
+<a href="#daftar" class="btn-ticket btn-vvip">🛒 Beli Sekarang</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+</div>
+</section>
+<!-- ============================================================
+SOAL 5 — MODIFIKASI DESAIN BEBAS
+Buat section Kontak/Footer dengan kreativitasmu sendiri
+============================================================ -->
+<section id="kontak">
+<div class="container">
+<span class="soal-label">Soal 5 — Kreativitas Desain</span>
+<h2 class="section-title">Hubungi Kami</h2>
+<p class="text-muted mb-4">
+
+<!-- 3 Info Cards -->
+<div class="row mb-5 justify-content-center">
+
+<!-- Alamat -->
+<div class="col-md-4 col-12 mb-4">
+<div class="contact-info-card">
+<div class="contact-icon">📍</div>
+<h6>Alamat</h6>
+<p>Gelora Bung Karno,<br/>Jakarta Pusat, DKI Jakarta</p>
+</div>
+</div>
+
+<!-- Email -->
+<div class="col-md-4 col-12 mb-4">
+<div class="contact-info-card">
+<div class="contact-icon">✉️</div>
+<h6>Email</h6>
+<p>info@soundwavefest.id<br/>support@soundwavefest.id</p>
+</div>
+</div>
+
+<!-- Telepon -->
+<div class="col-md-4 col-12 mb-4">
+<div class="contact-info-card">
+<div class="contact-icon">📞</div>
+<h6>Telepon</h6>
+<p>+62 822-5746-1510<br/>Senin – Jumat, 09.00–17.00</p>
+</div>
+</div>
+
+</div>
+
+<!-- Sosmed -->
+<div class="row justify-content-center">
+<div class="col-md-6 mb-4">
+<div class="sosmed-box">
+<h5 class="sosmed-title">🎙️ Ikuti Kami</h5>
+<p class="sosmed-sub">Dapatkan info terbaru, behind the scene, dan giveaway tiket gratis!</p>
+
+<a href="#" class="sosmed-item instagram">
+<span class="sosmed-logo">📸</span>
+<div>
+<div class="sosmed-name">Instagram</div>
+<div class="sosmed-handle">@soundwavefest</div>
+</div>
+<span class="sosmed-arrow">→</span>
+</a>
+
+<a href="#" class="sosmed-item twitter">
+<span class="sosmed-logo">🐦</span>
+<div>
+<div class="sosmed-name">Twitter / X</div>
+<div class="sosmed-handle">@soundwavefest</div>
+</div>
+<span class="sosmed-arrow">→</span>
+</a>
+
+<a href="#" class="sosmed-item tiktok">
+<span class="sosmed-logo">🎵</span>
+<div>
+<div class="sosmed-name">TikTok</div>
+<div class="sosmed-handle">@soundwavefest</div>
+</div>
+<span class="sosmed-arrow">→</span>
+</a>
+
+<a href="#" class="sosmed-item youtube">
+<span class="sosmed-logo">▶️</span>
+<div>
+<div class="sosmed-name">YouTube</div>
+<div class="sosmed-handle">Soundwave Fest Official</div>
+</div>
+<span class="sosmed-arrow">→</span>
+</a>
+
+</div>
+</div>
+</div>
+
+</div>
+</section>
+</div>
+</section>
+<footer>
+<p>SOUNDWAVE FEST 2025 &copy; Hak Cipta Dilindungi | UTS Web Desain 2 — Paket A</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+></script>
+</body>
+</html>
